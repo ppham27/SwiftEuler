@@ -1,7 +1,7 @@
 import Problem4
 import XCTest
 
-final class Problem4Test : XCTestCase {
+final class Problem4Tests : XCTestCase {
     func testOne() {
         XCTAssertEqual(solve(numDigits: 1), 9)
     }
