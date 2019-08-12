@@ -26,7 +26,7 @@ let package = Package(
         dependencies: ["Math"]),
       .target(
         name: "Primes",
-        dependencies: []),
+        dependencies: ["Math"]),
       .testTarget(
         name: "PrimesTests",
         dependencies: ["Primes"]),
@@ -66,6 +66,12 @@ let package = Package(
       .testTarget(
         name: "Problem6Tests",
         dependencies: ["Problem6"]),
+      .target(
+        name: "Problem7",
+        dependencies: ["Primes"]),
+      .testTarget(
+        name: "Problem7Tests",
+        dependencies: ["Problem7"]),
       .target(
         name: "Strings",
         dependencies: []),

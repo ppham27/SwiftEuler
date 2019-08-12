@@ -14,10 +14,10 @@ func updateState(state: SequenceState) -> SequenceState {
 }
 
 
-func solveHelper(upperBound: Int, state: SequenceState) -> Int {
+func solve(upperBound: Int, state: SequenceState) -> Int {
     let newState = updateState(state: state)    
     return (newState.currentTerm > upperBound ? state.sumOfEvenTerms :
-              solveHelper(upperBound: upperBound, state: newState))
+              solve(upperBound: upperBound, state: newState))
 }
 
 
@@ -26,5 +26,5 @@ public func solve(upperBound: Int) -> Int {
       currentTerm: 1,
       previousTerm: 0,
       sumOfEvenTerms: 0)
-    return solveHelper(upperBound: 4000000, state: initialState)
+    return solve(upperBound: 4000000, state: initialState)
 }
