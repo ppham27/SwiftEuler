@@ -73,6 +73,12 @@ let package = Package(
         name: "Problem7Tests",
         dependencies: ["Problem7"]),
       .target(
+        name: "Problem8",
+        dependencies: []),
+      .testTarget(
+        name: "Problem8Tests",
+        dependencies: ["Problem8"]),
+      .target(
         name: "Strings",
         dependencies: []),
       .testTarget(
