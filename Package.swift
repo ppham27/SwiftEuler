@@ -79,6 +79,12 @@ let package = Package(
         name: "Problem8Tests",
         dependencies: ["Problem8"]),
       .target(
+        name: "Problem9",
+        dependencies: []),
+      .testTarget(
+        name: "Problem9Tests",
+        dependencies: ["Problem9"]),
+      .target(
         name: "Strings",
         dependencies: []),
       .testTarget(
